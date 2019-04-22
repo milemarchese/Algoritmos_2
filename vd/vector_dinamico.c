@@ -9,8 +9,10 @@ void vector_destruir(vector_t* vector){
 }
 
 bool vector_obtener(vector_t* vector, size_t pos, int* valor){
-	if (vector->tam <= pos)
+	if (vector->tam <= pos){
 		return false;
+	}
+
 	*valor= vector->datos[pos];
 	return true;
 }
@@ -19,6 +21,7 @@ bool vector_guardar(vector_t* vector, size_t pos, int valor){
 	if (vector->tam <= pos){
 		return false;
 	}
+
 	vector->datos[pos]=valor;
 	return true;
 }
